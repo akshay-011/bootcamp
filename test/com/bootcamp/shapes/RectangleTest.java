@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class RectangleTest {
     @Test
     void shouldGiveAreaOfRectangle() {
-        Rectangle rectangle = new Rectangle(3,2);
+        Rectangle rectangle = new Rectangle(3, 2);
 
         assertEquals(6, rectangle.area());
     }
@@ -16,5 +16,11 @@ class RectangleTest {
     void shouldGiveArea() {
         Rectangle rectangle = new Rectangle(2, 2);
         assertEquals(4, rectangle.area());
+    }
+
+    @Test
+    void shouldGiveZeroAsArea() {
+        Rectangle rectangle = new Rectangle(1,0);
+        assertEquals(0, rectangle.area());
     }
 }
