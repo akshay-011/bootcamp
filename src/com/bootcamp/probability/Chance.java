@@ -16,7 +16,7 @@ public class Chance {
         return this.chance + "%";
     }
 
-    public Chance compliment () {
+    public Chance compliment() {
         return new Chance(100 - chance);
     }
 
@@ -39,7 +39,7 @@ public class Chance {
 
     public static Chance fromProbability(double possibleOutComes, double numberOfOutComes) {
         double chance = (possibleOutComes / numberOfOutComes) * 100;
-        return  Chance.fromPercentage(chance);
+        return Chance.fromPercentage(chance);
     }
 
     public Chance and(Chance multiplicand) {
