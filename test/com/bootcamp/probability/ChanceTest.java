@@ -8,8 +8,8 @@ class ChanceTest {
 
     @Test
     void shouldGiveRemainingChance() {
-        Chance chance = new Chance(70);
-        Chance expected = new Chance(30);
+        Chance chance = Chance.fromProbability(70, 100);
+        Chance expected = Chance.fromProbability(30, 100);
 
         assertEquals(expected, chance.compliment());
     }

@@ -4,9 +4,9 @@ import java.util.Objects;
 
 public class Chance {
 
-    private final int chance;
+    private final double chance;
 
-    public Chance(int chance) {
+    private Chance(double chance) {
         this.chance = chance;
     }
 
@@ -29,5 +29,11 @@ public class Chance {
     @Override
     public int hashCode() {
         return Objects.hashCode(chance);
+    }
+
+    public static Chance fromProbability(double possibleOutComes, double numberOfOutComes) {
+        double chance = (possibleOutComes / numberOfOutComes) * 100;
+
+        return  new Chance(chance);
     }
 }

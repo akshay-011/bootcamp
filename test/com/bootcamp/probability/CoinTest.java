@@ -9,6 +9,7 @@ class CoinTest {
     @Test
     void shouldGiveChanceOfGettingTail() {
         Chance chance = Coin.flip();
-        assertEquals("50%", chance.toString());
+        Chance expected = Chance.fromProbability(1, 2);
+        assertEquals(expected, chance);
     }
 }
