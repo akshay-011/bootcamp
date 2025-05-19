@@ -32,7 +32,7 @@ public class Chance {
     }
 
     public static Chance fromPercentage(double percentage) {
-        if (percentage < 0 || percentage > 100) throw new RuntimeException("Invalid argument");
+        if (percentage < 0 || percentage > 100) throw new ChanceIllegalArgument();
         return new Chance(percentage);
     }
 

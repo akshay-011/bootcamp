@@ -24,8 +24,8 @@ class ChanceTest {
 
     @Test
     void testingCreationOfObject() {
-        assertThrows(RuntimeException.class, () -> Chance.fromPercentage(-10), "Should not create chance if percentage is negative");
-        assertThrows(RuntimeException.class, () -> Chance.fromPercentage(200), "Should not create chance if percentage is more than 100");
+        assertThrows(ChanceIllegalArgument.class, () -> Chance.fromPercentage(-10), "Should not create chance if percentage is negative");
+        assertThrows(ChanceIllegalArgument.class, () -> Chance.fromPercentage(200), "Should not create chance if percentage is more than 100");
     }
 
     @Test
