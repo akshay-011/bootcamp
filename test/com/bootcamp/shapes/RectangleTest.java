@@ -1,6 +1,7 @@
 package com.bootcamp.shapes;
 
 import org.junit.jupiter.api.Test;
+import org.w3c.dom.css.Rect;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -20,7 +21,21 @@ class RectangleTest {
 
     @Test
     void shouldGiveZeroAsArea() {
-        Rectangle rectangle = new Rectangle(1,0);
+        Rectangle rectangle = new Rectangle(1, 0);
         assertEquals(0, rectangle.area());
+    }
+
+    @Test
+    void shouldGivePerimeter() {
+        Rectangle rectangle = new Rectangle(2, 2);
+        assertEquals(8, rectangle.perimeter());
+
+    }
+
+    @Test
+    void shouldGivePerimeterForOneDimensionZero()  {
+        Rectangle rectangle = new Rectangle(2, 0);
+        assertEquals(4, rectangle.perimeter());
+
     }
 }
