@@ -1,12 +1,13 @@
 package com.bootcamp.probability;
 
+
 import java.util.Objects;
 
 public class Chance {
 
     private final double chance;
 
-    private Chance(double chance) {
+    protected Chance(double chance) {
         this.chance = chance;
     }
 
@@ -31,9 +32,13 @@ public class Chance {
         return Objects.hashCode(chance);
     }
 
+    public static Chance fromPercentage(double percentage) {
+        if (percentage < 0 || percentage > 100) throw new RuntimeException("Invalid argument");
+        return new Chance(percentage);
+    }
+
     public static Chance fromProbability(double possibleOutComes, double numberOfOutComes) {
         double chance = (possibleOutComes / numberOfOutComes) * 100;
-
-        return  new Chance(chance);
+        return  Chance.fromPercentage(chance);
     }
 }
