@@ -1,7 +1,6 @@
 package com.bootcamp.shapes;
 
 import org.junit.jupiter.api.Test;
-import org.w3c.dom.css.Rect;
 
 import static org.junit.jupiter.api.Assertions.*;
 

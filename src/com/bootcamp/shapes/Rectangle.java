@@ -1,6 +1,8 @@
 package com.bootcamp.shapes;
 
-public class Rectangle {
+import com.bootcamp.models.Polygon;
+
+public class Rectangle implements Polygon {
 
     private final int length;
     private final int breadth;
@@ -10,10 +12,12 @@ public class Rectangle {
         this.breadth = breadth;
     }
 
+    @Override
     public int area() {
         return length * breadth;
     }
 
+    @Override
     public int perimeter() {
         return 2 * (length + breadth);
     }
