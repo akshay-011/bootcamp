@@ -9,7 +9,7 @@ class SquareTest {
     void shouldGiveArea() {
         Square square = new Square(2);
         assertEquals(4, square.area());
-        assertEquals(4, square.perimeter());
+        assertEquals(8, square.perimeter());
     }
 
 
