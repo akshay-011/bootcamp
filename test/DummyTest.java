@@ -7,4 +7,5 @@ class DummyTest {
     void shouldGiveNumber() {
         assertEquals(5, Dummy.number());
     }
+
 }
