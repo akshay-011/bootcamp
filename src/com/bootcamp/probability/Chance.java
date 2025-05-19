@@ -7,7 +7,7 @@ public class Chance {
 
     private final double chance;
 
-    protected Chance(double chance) {
+    private Chance(double chance) {
         this.chance = chance;
     }
 
@@ -40,5 +40,10 @@ public class Chance {
     public static Chance fromProbability(double possibleOutComes, double numberOfOutComes) {
         double chance = (possibleOutComes / numberOfOutComes) * 100;
         return  Chance.fromPercentage(chance);
+    }
+
+    public Chance and(Chance multiplicand) {
+        double newValue = this.chance * multiplicand.chance;
+        return new Chance(newValue / 100);
     }
 }
