@@ -8,7 +8,6 @@ class RectangleTest {
     @Test
     void shouldGiveAreaOfRectangle() {
         Rectangle rectangle = new Rectangle(3, 2);
-
         assertEquals(6, rectangle.area());
     }
 
