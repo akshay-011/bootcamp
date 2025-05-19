@@ -36,4 +36,21 @@ class ChanceTest {
 
         assertEquals(expected, chance1.and(chance2));
     }
+
+    @Test
+    void shouldAddChances() {
+        Chance chance1 = Chance.fromPercentage(10);
+        Chance chance2 = Chance.fromPercentage(20);
+        Chance expected = Chance.fromPercentage(28);
+
+        assertEquals(expected, chance1.or(chance2));
+    }
+    @Test
+    void shouldAddBothChances() {
+        Chance chance1 = Chance.fromPercentage(100);
+        Chance chance2 = Chance.fromPercentage(100);
+        Chance expected = Chance.fromPercentage(100);
+
+        assertEquals(expected, chance1.or(chance2));
+    }
 }

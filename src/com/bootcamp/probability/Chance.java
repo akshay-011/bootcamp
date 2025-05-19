@@ -1,6 +1,5 @@
 package com.bootcamp.probability;
 
-
 import java.util.Objects;
 
 public class Chance {
@@ -45,5 +44,10 @@ public class Chance {
     public Chance and(Chance multiplicand) {
         double newValue = this.chance * multiplicand.chance;
         return new Chance(newValue / 100);
+    }
+
+    public Chance or(Chance chance2) {
+        double sum = chance + chance2.chance - this.and(chance2).chance;
+        return new Chance(sum);
     }
 }
