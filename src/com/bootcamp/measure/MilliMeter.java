@@ -2,7 +2,7 @@ package com.bootcamp.measure;
 
 import java.util.Objects;
 
-public class MilliMeter {
+public class MilliMeter extends MeasurementUnit {
     private final double unit;
 
     public MilliMeter(double unit) {
@@ -19,5 +19,10 @@ public class MilliMeter {
     @Override
     public int hashCode() {
         return Objects.hashCode(unit);
+    }
+
+    @Override
+    public double convert() {
+        return unit / 10;
     }
 }

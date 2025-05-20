@@ -10,7 +10,7 @@ class CentimeterTest {
         Centimeter centimeter = new Centimeter(5);
         MilliMeter milliMeter = new MilliMeter(50);
 
-        assert(centimeter.equalsToMM(milliMeter));
+        assert(centimeter.isEqual(milliMeter));
     }
 
     @Test
@@ -18,6 +18,6 @@ class CentimeterTest {
         Centimeter centimeter = new Centimeter(5);
         MilliMeter milliMeter = new MilliMeter(51);
 
-        assertFalse(centimeter.equalsToMM(milliMeter));
+        assertFalse(centimeter.isEqual(milliMeter));
     }
 }

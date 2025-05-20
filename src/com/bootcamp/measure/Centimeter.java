@@ -2,7 +2,7 @@ package com.bootcamp.measure;
 
 import java.util.Objects;
 
-public class Centimeter {
+public class Centimeter extends MeasurementUnit {
     private final double unit;
 
     public Centimeter(double unit) {
@@ -27,5 +27,10 @@ public class Centimeter {
 
     private MilliMeter toMilliMeter() {
         return new MilliMeter(unit * 10);
+    }
+
+    @Override
+    public double convert() {
+        return unit;
     }
 }
