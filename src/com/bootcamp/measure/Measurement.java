@@ -6,6 +6,7 @@ public class Measurement {
     public static final double CENTIMETER_CF = 10;
     public static final double FEET_CF = 304.8;
     public static final double INCH_CF = 25.4;
+    public static final int MILLIMETER_CF = 1;
     private final double unit;
 
     protected Measurement(double unit) {
@@ -19,7 +20,7 @@ public class Measurement {
     }
 
     public static Measurement fromMM(double value) {
-        return Measurement.create(value, 1);
+        return Measurement.create(value, MILLIMETER_CF);
     }
 
     public static Measurement fromCM(double value) {
