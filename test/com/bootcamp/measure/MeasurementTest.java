@@ -26,4 +26,17 @@ class MeasurementTest {
         assert(Measurement.compare(0.1, 0.09, 0.1));
         assertFalse(Measurement.compare(0.1, 0.7, 0.1), "should fail these are not same");
     }
+
+    @Test
+    void shouldAdd2Units() {
+        Measurement augend = Measurement.fromInch(2);
+        Measurement addend = Measurement.fromInch(3);
+
+        assertEquals(Measurement.fromInch(5), augend.add(addend), "should add 2 units");
+    }
+
+    @Test
+    void shouldThrowError() {
+        assertThrows(InvalidMeasurement.class, () -> Measurement.fromMM(-10));
+    }
 }
