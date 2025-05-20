@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Measurement {
     private final double unit;
 
-    private Measurement(double unit) {
+    protected Measurement(double unit) {
         this.unit = unit;
     }
 
@@ -26,10 +26,8 @@ public class Measurement {
     }
 
     public static boolean compare(double value1, double value2, double delta) {
-        return (value2 - value1) < delta;
+        return Math.abs(value2 - value1) < delta;
     }
-
-
 
     @Override
     public boolean equals(Object o) {
